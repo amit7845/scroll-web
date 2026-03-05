@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'kamatagi89/test-dev:latest'
         DEPLOY_FILE  = 'deploy.yaml'
-        DOMAIN       = 'mico123.duckdns.org '
+        DOMAIN       = 'mico123.duckdns.org'
     }
 
     stages {
@@ -78,7 +78,7 @@ stage('Login to Docker Hub') {
             steps {
                 sh '''
                 echo "🚀 Deploying to Kubernetes..."
-                microk8s.kubectl apply -f $DEPLOY_FILE
+                microk8s kubectl apply -f $DEPLOY_FILE
                 echo "Waiting for pods to stabilize..."
                 sleep 20
                 microk8s.kubectl get pods
@@ -114,6 +114,7 @@ stage('Login to Docker Hub') {
         }
     }
 }
+
 
 
 
