@@ -39,7 +39,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host:mico123.duckdns.org 
+  - host: mico123.duckdns.org 
     http:
       paths:
       - path: /
@@ -49,6 +49,7 @@ spec:
             name: devops-service
             port:
               number: 80
+
 
 
 
