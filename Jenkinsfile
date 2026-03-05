@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'kamatagi89/test-dev:latest'
         DEPLOY_FILE  = 'deploy.yaml'
-        DOMAIN       = 'micro123.duckdns.org'
+        DOMAIN       = 'mico123.duckdns.org'
     }
 
     stages {
@@ -114,5 +114,6 @@ pipeline {
         }
     }
 }
+
 
 
